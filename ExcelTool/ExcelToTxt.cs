@@ -167,7 +167,7 @@ namespace GameMain.Editor.ExcelTool
             foreach (var excelName in excelFiles)
             {
                 string excelFile = Utility.Path.GetRegularPath(excelName);
-                if (!excelFile.EndsWith(".xlsx") || excelFile.Contains("~$")||excelFile.Contains("~"))
+                if (!excelFile.EndsWith(".xlsx") || excelFile.Contains("~$") || excelFile.Contains("~"))
                     continue;
                 FileStream fileStream = new FileStream(excelFile, FileMode.Open, FileAccess.Read);
                 IWorkbook workbook = new XSSFWorkbook(fileStream);
